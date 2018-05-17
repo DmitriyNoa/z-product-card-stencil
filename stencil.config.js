@@ -1,5 +1,5 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'zlib',
   outputTargets:[
     { 
       type: 'dist' 

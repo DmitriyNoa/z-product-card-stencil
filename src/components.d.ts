@@ -27,33 +27,31 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface ZProductCard {
+      'productData': any;
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLZProductCardElement extends StencilComponents.ZProductCard, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLZProductCardElement: {
+    prototype: HTMLZProductCardElement;
+    new (): HTMLZProductCardElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'z-product-card': HTMLZProductCardElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'z-product-card': HTMLZProductCardElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'z-product-card': JSXElements.ZProductCardAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface ZProductCardAttributes extends HTMLAttributes {
+      'productData'?: any;
     }
   }
 }
