@@ -11,15 +11,14 @@ export class ZProductCard {
 
   @Event() productLiked: EventEmitter;
 
-  productLikedHandler(event: any) {
-    console.log("Product card says: ", event);
+  productLikedHandler() {
     this.productLiked.emit(this.productData);
   }
 
   render() {
     return (
       <div class="z-product-card">
-        <button class="z-product-card-wishlist" onClick={(event) => { this.productLikedHandler(event); }}><span class="z-icon z-icon-wishlist z-icon-small z-icon-black z-product-card-wishlist_icon"></span></button>
+        <button class="z-product-card-wishlist" onClick={(event) => { event.preventDefault(); this.productLikedHandler(); }}><span class="z-icon z-icon-wishlist z-icon-small z-icon-black z-product-card-wishlist_icon"></span></button>
 
         <div class="z-product-image">
           <img src={this.productData.image} alt="Zalando" class="z-product-image_image" />
