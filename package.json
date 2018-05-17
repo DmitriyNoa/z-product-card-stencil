@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
+  "name": "z-product-card",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Sproduct-card-stencil",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
@@ -29,14 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git@github.com:DmitriyNoa/z-product-card-stencil.git"
   },
-  "author": "Ionic Team",
+  "author": "Dmitriy Noa",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
-  "homepage": "https://github.com/ionic-team/stencil",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
