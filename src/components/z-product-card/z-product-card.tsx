@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag:      'z-product-card',
@@ -8,11 +8,16 @@ import { Component, Prop } from '@stencil/core';
 export class ZProductCard {
 
   @Prop() productData: any;
+  @Event() productLiked: EventEmitter;
+
+  productLikedHandler(product: any) {
+    this.productLiked.emit(product);
+  }
 
   render() {
     return (
       <div class="z-product-card">
-        <button class="z-product-card-wishlist"><span class="z-icon z-icon-wishlist z-icon-small z-icon-black z-product-card-wishlist_icon"></span></button>
+        <button class="z-product-card-wishlist" onClick={() => { this.productLikedHandler(this.productData); }}><span class="z-icon z-icon-wishlist z-icon-small z-icon-black z-product-card-wishlist_icon"></span></button>
 
         <div class="z-product-image">
           <img src={this.productData.image} alt="Zalando" class="z-product-image_image" />
