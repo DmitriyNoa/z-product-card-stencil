@@ -28,7 +28,7 @@ declare global {
 
   namespace StencilComponents {
     interface ZProductCard {
-      'productData': any;
+      'product': any;
     }
   }
 
@@ -52,7 +52,7 @@ declare global {
   namespace JSXElements {
     export interface ZProductCardAttributes extends HTMLAttributes {
       'onProductLiked'?: (event: CustomEvent) => void;
-      'productData'?: any;
+      'product'?: any;
     }
   }
 }

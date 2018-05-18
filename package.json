@@ -1,6 +1,6 @@
 {
   "name": "z-product-card",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Sproduct-card-stencil",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
