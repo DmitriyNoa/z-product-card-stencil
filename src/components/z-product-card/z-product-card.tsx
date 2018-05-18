@@ -30,7 +30,8 @@ export class ZProductCard {
   }
 
   render() {
-    console.log("Rendering component")
+    console.log("Rendering component");
+    console.log("Input data: ", this.product);
     return (
       <div class="z-product-card">
         <button class="z-product-card-wishlist" onClick={(event) => { event.preventDefault(); this.productLikedHandler(); }}><span class="z-icon z-icon-wishlist z-icon-small z-icon-black z-product-card-wishlist_icon"></span></button>
