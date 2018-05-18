@@ -15,7 +15,16 @@ export class ZProductCard {
     this.productLiked.emit(this.productData);
   }
 
+  componentWillLoad() {
+    console.log('Component is about to be rendered');
+  }
+
+  componentDidLoad() {
+    console.log('Component has been rendered');
+  }
+
   render() {
+    console.log("Rendering component")
     return (
       <div class="z-product-card">
         <button class="z-product-card-wishlist" onClick={(event) => { event.preventDefault(); this.productLikedHandler(); }}><span class="z-icon z-icon-wishlist z-icon-small z-icon-black z-product-card-wishlist_icon"></span></button>
