@@ -22,13 +22,8 @@ export class ZProductCard {
     } else {
      this.productDataParsed = this.product;
     }
-    console.log('Component is about to be rendered');
   }
-
-  componentDidLoad() {
-    console.log('Component has been rendered');
-  }
-
+  
   render() {
     console.log("Rendering component");
     console.log("Input data: ", this.product);
